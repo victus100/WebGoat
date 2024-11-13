@@ -632,9 +632,9 @@ public class MD5 {
     for (i = j = 0; j < len; i++, j += 4) {
       decodeBuffer[i] =
           ((buffer[j + offset] & 0xff))
-              | (((buffer[j + 1 + offset] & 0xff)) << 8)
-              | (((buffer[j + 2 + offset] & 0xff)) << 16)
-              | (((buffer[j + 3 + offset] & 0xff)) << 24);
+              | ((buffer[j + 1 + offset] & 0xff)) << 8
+              | ((buffer[j + 2 + offset] & 0xff)) << 16
+              | ((buffer[j + 3 + offset] & 0xff)) << 24;
     }
     return decodeBuffer;
   }
