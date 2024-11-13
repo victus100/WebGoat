@@ -40,7 +40,6 @@ public class FlagController extends AssignmentEndpoint {
   private final Flags flags;
 
   @PostMapping(path = "/challenge/flag", produces = MediaType.APPLICATION_JSON_VALUE)
-  @ResponseBody
   public AttackResult postFlag(@RequestParam String flag) {
     Flag expectedFlag = flags.getFlag(webSession.getCurrentLesson());
     if (expectedFlag.isCorrect(flag)) {
